@@ -21,7 +21,7 @@ class MainModuleTest extends TestCase
     {
         $rootDir = ROOT_DIR;
         $mainFile = "$rootDir/plugin.php";
-        $bootstrap = require ("$rootDir/inc/bootstrap.php");
+        $bootstrap = require "$rootDir/inc/bootstrap.php";
         $appContainer = $bootstrap($rootDir, $mainFile);
 
         return $appContainer;
