@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Me\Plugin\Core;
+namespace RedAcre\Theme\Core;
 
 use Dhii\Modular\Module\ModuleInterface;
 use Interop\Container\ServiceProviderInterface;

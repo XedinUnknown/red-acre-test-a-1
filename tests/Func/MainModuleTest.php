@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Me\Plugin\Test\Func;
+namespace RedAcre\Theme\Test\Func;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
@@ -13,7 +13,7 @@ class MainModuleTest extends TestCase
     {
         $appContainer = $this->bootstrapModule();
         $this->assertInstanceOf(ContainerInterface::class, $appContainer);
-        $this->assertTrue($appContainer->has('me/plugin/plugin'));
+        $this->assertTrue($appContainer->has('redacre/theme/basedir'));
         $this->assertFalse($appContainer->has(uniqid('non-existing-service')));
     }
 

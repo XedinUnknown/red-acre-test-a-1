@@ -4,6 +4,7 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/tests/Func" />
+        <option value="$PROJECT_DIR$/modules.local/core/tests" />
       </list>
     </option>
   </component>

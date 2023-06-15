@@ -5,7 +5,7 @@
       <paths name="WordPress Application">
         <serverdata>
           <mappings>
-            <mapping deploy="wp-content/plugins/plugin" local="$PROJECT_DIR$" web="/wp-content/plugins/plugin" />
+            <mapping deploy="wp-content/themes/red-acre-test-a-1" local="$PROJECT_DIR$" web="wp-content/themes/red-acre-test-a-1" />
           </mappings>
         </serverdata>
       </paths>

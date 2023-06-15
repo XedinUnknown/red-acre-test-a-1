@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Me\Plugin;
+namespace RedAcre\Theme;
 
 use Dhii\Container\CompositeCachingServiceProvider;
 use Dhii\Modular\Module\ModuleInterface;
