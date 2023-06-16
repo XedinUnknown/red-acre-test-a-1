@@ -159,62 +159,6 @@
             "time": "2023-02-27T10:47:13+00:00"
         },
         {
-            "name": "dhii/human-readable-interface",
-            "version": "0.2.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/human-readable-interface.git",
-                "reference": "04e14d69705ebf261605abd8144f27cb4daabccd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/human-readable-interface/zipball/04e14d69705ebf261605abd8144f27cb4daabccd",
-                "reference": "04e14d69705ebf261605abd8144f27cb4daabccd",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 | ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0 | ^7.0 | ^8.0 | ^9.0",
-                "slevomat/coding-standard": "^6.0",
-                "symfony/polyfill-php80": "^1.19",
-                "vimeo/psalm": "^3.11.7 | ^4.0"
-            },
-            "suggest": {
-                "dhii/i18n-interface": "For internationalizing and translating human readable strings.",
-                "symfony/polyfill-php80": "To add Stringable interface"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "0.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Util\\String\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dhii Team",
-                    "email": "development@dhii.co"
-                }
-            ],
-            "description": "Interfaces for human readable string interoperation.",
-            "support": {
-                "issues": "https://github.com/Dhii/human-readable-interface/issues",
-                "source": "https://github.com/Dhii/human-readable-interface/tree/0.2.x"
-            },
-            "time": "2021-03-05T00:45:27+00:00"
-        },
-        {
             "name": "dhii/module-interface",
             "version": "0.3.x-dev",
             "source": {
@@ -268,34 +212,34 @@
             "time": "2021-08-23T09:29:09+00:00"
         },
         {
-            "name": "dhii/package-interface",
+            "name": "dhii/services",
             "version": "0.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Dhii/package-interface.git",
-                "reference": "bcc73f4285eead9b482dbb89662b723abf49298b"
+                "url": "https://github.com/Dhii/services.git",
+                "reference": "1a17b6b2cb2fdef0c0b541c8992188d9740746ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/package-interface/zipball/bcc73f4285eead9b482dbb89662b723abf49298b",
-                "reference": "bcc73f4285eead9b482dbb89662b723abf49298b",
+                "url": "https://api.github.com/repos/Dhii/services/zipball/1a17b6b2cb2fdef0c0b541c8992188d9740746ce",
+                "reference": "1a17b6b2cb2fdef0c0b541c8992188d9740746ce",
                 "shasum": ""
             },
             "require": {
-                "dhii/validation-interface": "^0.3-alpha1",
-                "php": "^7.1 | ^8.0"
+                "php": "^7.1 | ^8.0",
+                "psr/container": "^1.0"
             },
             "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
                 "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
                 "slevomat/coding-standard": "^6.0",
-                "symfony/polyfill-php80": "^1.19",
-                "vimeo/psalm": "^4.4.0"
+                "vimeo/psalm": "^4.8"
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Dhii\\Package\\": "src"
+                    "Dhii\\Services\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -304,117 +248,16 @@
             ],
             "authors": [
                 {
-                    "name": "Anton Ukhanev",
-                    "email": "xedin.unknown@gmail.com"
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
                 }
             ],
-            "description": "Interfaces for package-related interop",
+            "description": "A collection of useful DI service implementations.",
             "support": {
-                "issues": "https://github.com/Dhii/package-interface/issues",
-                "source": "https://github.com/Dhii/package-interface/tree/v0.1.0-alpha4"
+                "issues": "https://github.com/Dhii/services/issues",
+                "source": "https://github.com/Dhii/services/tree/v0.1.1-alpha3"
             },
-            "time": "2021-12-08T15:57:36+00:00"
-        },
-        {
-            "name": "dhii/validation-interface",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/validation-interface.git",
-                "reference": "0e73c7bf3d2421ceb79331c60a9bc1b1d5eb65a6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/validation-interface/zipball/0e73c7bf3d2421ceb79331c60a9bc1b1d5eb65a6",
-                "reference": "0e73c7bf3d2421ceb79331c60a9bc1b1d5eb65a6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 | ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
-                "slevomat/coding-standard": "^6.0",
-                "symfony/polyfill-mbstring": "1.20",
-                "symfony/polyfill-php80": "^1.19",
-                "vimeo/psalm": "^3.11.7 | ^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "0.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Validation\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Ukhanev",
-                    "email": "xedin.unknown@gmail.com"
-                }
-            ],
-            "description": "A base interface for validators",
-            "support": {
-                "issues": "https://github.com/Dhii/validation-interface/issues",
-                "source": "https://github.com/Dhii/validation-interface/tree/v0.3.0-alpha3"
-            },
-            "time": "2021-01-14T16:19:20+00:00"
-        },
-        {
-            "name": "dhii/versions",
-            "version": "0.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/versions.git",
-                "reference": "120b22b248d0b46e41bac93bf3394516c9d55730"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/versions/zipball/120b22b248d0b46e41bac93bf3394516c9d55730",
-                "reference": "120b22b248d0b46e41bac93bf3394516c9d55730",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/package-interface": "^0.1.0-alpha3",
-                "php": "^7.1 | ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
-                "slevomat/coding-standard": "^6.0",
-                "symfony/polyfill-php80": "^1.19",
-                "vimeo/psalm": "^4.4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Versions\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Ukhanev",
-                    "email": "xedin.unknown@gmail.com"
-                }
-            ],
-            "description": "Implementation for dealing with SemVer-compliant versions",
-            "support": {
-                "issues": "https://github.com/Dhii/versions/issues",
-                "source": "https://github.com/Dhii/versions/tree/v0.1.0-alpha3"
-            },
-            "time": "2021-12-08T16:54:50+00:00"
+            "time": "2023-01-31T23:49:37+00:00"
         },
         {
             "name": "psr/container",
@@ -519,58 +362,6 @@
                 "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2"
             },
             "time": "2023-04-15T19:07:00+00:00"
-        },
-        {
-            "name": "wp-oop/wordpress-interface",
-            "version": "v0.1.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wp-oop/wordpress-interface.git",
-                "reference": "5e40acb49b76702f409bb5bcd2ea5459c9b946f5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wp-oop/wordpress-interface/zipball/5e40acb49b76702f409bb5bcd2ea5459c9b946f5",
-                "reference": "5e40acb49b76702f409bb5bcd2ea5459c9b946f5",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/human-readable-interface": "^0.2.0-alpha1",
-                "dhii/package-interface": "^0.1-alpha3",
-                "php": "^7.1 | ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
-                "slevomat/coding-standard": "^6.0",
-                "vimeo/psalm": "^4.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-task/initial-interfaces": "0.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "WpOop\\WordPress\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Ukhanev",
-                    "email": "xedin.unknown@gmail.com"
-                }
-            ],
-            "description": "Interfaces for interop within WordPress",
-            "support": {
-                "issues": "https://github.com/wp-oop/wordpress-interface/issues",
-                "source": "https://github.com/wp-oop/wordpress-interface/tree/v0.1.0-alpha2"
-            },
-            "time": "2021-04-30T09:37:37+00:00"
         }
     ],
     "packages-dev": [

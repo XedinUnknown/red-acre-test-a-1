@@ -20,9 +20,6 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/dhii/module-interface" />
-      <path value="$PROJECT_DIR$/vendor/dhii/validation-interface" />
-      <path value="$PROJECT_DIR$/vendor/dhii/versions" />
-      <path value="$PROJECT_DIR$/vendor/wp-oop/wordpress-interface" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
@@ -79,11 +76,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/dhii/human-readable-interface" />
-      <path value="$PROJECT_DIR$/vendor/dhii/package-interface" />
       <path value="$PROJECT_DIR$/vendor/dhii/containers" />
       <path value="$PROJECT_DIR$/vendor/dhii/collections-interface" />
       <path value="$PROJECT_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/vendor/dhii/services" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
