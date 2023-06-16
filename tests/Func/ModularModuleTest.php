@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace RedAcre\Theme\Test\Func;
+namespace RedAcre\TestA1\Test\Func;
 
 use Dhii\Container\DelegatingContainer;
 use Dhii\Modular\Module\ModuleInterface;
 use Interop\Container\ServiceProviderInterface;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use RedAcre\Theme\ModularModule as Subject;
+use RedAcre\TestA1\ModularModule as Subject;
 use Psr\Container\ContainerInterface;
 
 class ModularModuleTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RedAcre\Theme;
+namespace RedAcre\TestA1;
 
 use Dhii\Container\CompositeCachingServiceProvider;
 use Dhii\Modular\Module\ModuleInterface;

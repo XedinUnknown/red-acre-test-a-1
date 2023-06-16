@@ -2,7 +2,7 @@
 
 use Dhii\Container\ServiceProvider;
 use Dhii\Modular\Module\ModuleInterface;
-use RedAcre\Theme\Core\Module;
+use RedAcre\TestA1\Core\Module;
 
 return function (string $rootDir, string $mainFile): ModuleInterface {
     $rootDir = dirname($mainFile);

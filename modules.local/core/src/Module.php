@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RedAcre\Theme\Core;
+namespace RedAcre\TestA1\Core;
 
 use Dhii\Modular\Module\ModuleInterface;
 use Interop\Container\ServiceProviderInterface;

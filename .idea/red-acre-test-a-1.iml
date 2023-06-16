@@ -3,9 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="RedAcre\Theme\" />
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="RedAcre\Theme\Test\" />
-      <sourceFolder url="file://$MODULE_DIR$/modules.local/core/src" isTestSource="false" packagePrefix="RedAcre\Theme\Core\" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="RedAcre\TestA1\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="RedAcre\TestA1\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules.local/core/src" isTestSource="false" packagePrefix="RedAcre\TestA1\Core\" />
       <sourceFolder url="file://$MODULE_DIR$/tests/Func" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modules.local/core/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modules.local/core/tests" isTestSource="true" />

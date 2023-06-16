@@ -26,12 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "RedAcre\\Theme\\": "src"
+      "RedAcre\\TestA1\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "RedAcre\\Theme\\Test\\": "tests"
+      "RedAcre\\TestA1\\Test\\": "tests"
     }
   },
   "extra": {

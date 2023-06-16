@@ -6,6 +6,9 @@ use Dhii\Services\Factories\Value;
 
 return function (string $rootDir, string $mainFile): array {
     return [
-        'redacre/theme/basedir' => new Value($rootDir),
+        /**
+         * @return string The theme's base directory
+         */
+        'redacre/test-a1/basedir' => new Value($rootDir),
     ];
 };
