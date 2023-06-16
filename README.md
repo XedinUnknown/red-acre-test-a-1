@@ -8,4 +8,4 @@ A test theme for Red Acre.
 ## Notes
 Created from [wp-oop/plugin-boilerplate][]. 
 
-[wp-oop/plugin-boilerplate] https://github.com/wp-oop/plugin-boilerplate
+[wp-oop/plugin-boilerplate]: https://github.com/wp-oop/plugin-boilerplate
