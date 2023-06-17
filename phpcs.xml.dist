@@ -4,7 +4,9 @@
          xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
 
     <file>./src</file>
+    <file>./modules</file>
 
+    <exclude-pattern>./modules/**/tests</exclude-pattern>
 
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
 

@@ -1,18 +1,24 @@
 .PHONY: all \
 		build \
 		install \
-		install-php
+		install-php \
+		test \
+		test-php
 
 include .env
 
-all:
-	make build
+all: build
 
-build:
-	make install
+build: install
 
 install:
-	make install-php
+	$(MAKE) install-php
 
 install-php:
 	composer install
+
+test:
+	$(MAKE) test-php
+
+test-php:
+	vendor/bin/phpunit

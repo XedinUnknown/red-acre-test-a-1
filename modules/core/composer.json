@@ -20,5 +20,10 @@
     "psr-4": {
       "RedAcre\\TestA1\\Core\\": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RedAcre\\TestA1\\Core\\Test\\": "src"
+    }
   }
 }

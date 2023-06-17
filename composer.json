@@ -31,13 +31,13 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "RedAcre\\TestA1\\Test\\": "tests"
+      "RedAcre\\TestA1\\Test\\": "tests/phpunit"
     }
   },
   "extra": {
     "merge-plugin": {
       "include": [
-        "modules.local/*/composer.json"
+        "modules/*/composer.json"
       ]
     }
   },
