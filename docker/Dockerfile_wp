@@ -6,13 +6,27 @@ ARG WORDPRESS_VERSION
 FROM php:${PHP_BUILD_VERSION}-cli as build
 
 ARG BUILD_ROOT_PATH
+ARG NODE_VERSION
 
+# PHP
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 RUN apt-get update
 RUN apt-get install -y zip unzip curl git
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
+
+# Node
+RUN apt install -y curl
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
+RUN node --version
+RUN npm --version
+RUN npm install -g yarn
 
 # Add github public keys
 RUN apt-get install -y openssh-client
@@ -26,23 +40,37 @@ COPY . ./
 FROM php:${PHP_TEST_VERSION}-cli as test
 
 ARG BUILD_ROOT_PATH
+ARG NODE_VERSION
 
+# PHP
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 RUN pecl install xdebug-3.1.6
 RUN docker-php-ext-install pcntl
 RUN docker-php-ext-install posix
 
+# Node
+RUN apt install -y curl
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
+RUN node --version
+RUN npm --version
+
 WORKDIR ${BUILD_ROOT_PATH}
 COPY --from=build ${BUILD_ROOT_PATH} ${BUILD_ROOT_PATH}
 
 
-# Install PHP dev dependencies
+# Install dev dependencies
 FROM build as vendor-dev
 
 ARG BUILD_ROOT_PATH
 
 WORKDIR ${BUILD_ROOT_PATH}
 RUN COMPOSER_DISCARD_CHANGES=true composer install
+RUN yarn install
 
 
 # WordPress for development
