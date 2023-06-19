@@ -7,6 +7,7 @@ declare(strict_types=1);
     $rootDir = dirname($baseDir, 2);
     define('BASE_DIR', $rootDir);
     define('BASE_PATH', "$rootDir/functions.php");
+    define('STUBS_DIR', "$baseDir/stubs");
 
     error_reporting(E_ALL | E_STRICT);
 
