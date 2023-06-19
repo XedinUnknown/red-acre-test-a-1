@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace RedAcre\TestA1;
 
 use Dhii\Container\ServiceProvider;
@@ -35,6 +34,7 @@ class MainModule implements ModuleInterface
         $srcDir = __DIR__;
         $rootDir = $this->baseDir;
 
+        /** @psalm-suppress TooManyArguments */
         return new ServiceProvider(
             (require "$srcDir/factories.php")($this->pluginFilePath, $rootDir),
             (require "$srcDir/extensions.php")()

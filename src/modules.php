@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use RedAcre\TestA1\Blocks\BlocksModule;
 use RedAcre\TestA1\Core\CoreModule;
 use RedAcre\TestA1\Theme\ThemeModule;
