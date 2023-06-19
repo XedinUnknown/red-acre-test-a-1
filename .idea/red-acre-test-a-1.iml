@@ -5,10 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="RedAcre\TestA1\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/tests/Func" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modules.local/core/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modules.local/core/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/modules/core/src" isTestSource="false" packagePrefix="RedAcre\TestA1\Core\" />
       <sourceFolder url="file://$MODULE_DIR$/tests/phpunit" isTestSource="true" packagePrefix="RedAcre\TestA1\Test\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/amp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/byte-stream" />
@@ -71,6 +69,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-stubs/wordpress-stubs" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/services" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/antecedent/patchwork" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/brain/monkey" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -80,6 +80,10 @@
       <path value="$PROJECT_DIR$/vendor/dhii/collections-interface" />
       <path value="$PROJECT_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
       <path value="$PROJECT_DIR$/vendor/dhii/services" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/antecedent/patchwork" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/brain/monkey" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

@@ -12,4 +12,5 @@ declare(strict_types=1);
     error_reporting(E_ALL | E_STRICT);
 
     require_once "$rootDir/vendor/autoload.php";
+    require_once "$rootDir/vendor/antecedent/patchwork/Patchwork.php";
 })(__FILE__);
