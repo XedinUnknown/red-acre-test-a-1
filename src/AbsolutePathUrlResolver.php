@@ -51,7 +51,7 @@ class AbsolutePathUrlResolver implements UrlResolverInterface
 
         $relativePath = substr($path, $basePathLength);
         if ($relativePath === false) {
-            throw new RuntimeException(sprintf('Could not take slice of "%1$s" starting at', $path, $basePathLength));
+            throw new RuntimeException(sprintf('Could not take slice of "%1$s" starting at index %2$d', $path, $basePathLength));
         }
 
         $url = $baseUrl . $relativePath;
