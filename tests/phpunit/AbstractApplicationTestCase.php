@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 use Psr\Container\ContainerInterface;
 use Dhii\Modular\Module\Exception\ModuleExceptionInterface;
+use RedAcre\TestA1\MainModule;
 use RuntimeException;
 
 /**
@@ -27,7 +28,8 @@ class AbstractApplicationTestCase extends AbstractModularTestCase
     {
         $baseDir = BASE_DIR;
         $basePath = BASE_PATH;
-        $appModules = (require "$baseDir/src/modules.php")($basePath, $baseDir);
+        $mainModule = new MainModule($basePath, $baseDir);
+        $appModules = array_merge((require "$baseDir/src/modules.php")($basePath, $baseDir), [$mainModule]);
         $appContainer = $this->bootstrapModules($appModules, $factories, $extensions);
 
         return $appContainer;
