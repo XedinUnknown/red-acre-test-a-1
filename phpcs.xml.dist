@@ -7,6 +7,8 @@
     <file>./modules</file>
 
     <exclude-pattern>./modules/**/tests</exclude-pattern>
+    <exclude-pattern>./modules/**/node_modules</exclude-pattern>
+    <exclude-pattern>*.js</exclude-pattern>
 
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
     <config name="testVersion" value="7.2-"/>
