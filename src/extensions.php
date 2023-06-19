@@ -11,6 +11,7 @@ return function (): array {
          */
         'redacre/blocks/definitions' => function (ContainerInterface $c, iterable $prev): iterable {
             $otherDefinitions = [
+                $c->get('redacre/test-a1/theme/blocks/definitions'),
             ];
 
             yield from $prev;
@@ -25,6 +26,7 @@ return function (): array {
         'redacre/blocks/categories' => function (ContainerInterface $c, array $prev): array {
             /** @var list<array> $otherCategories */
             $otherCategories = [
+                $c->get('redacre/test-a1/theme/blocks/categories'),
             ];
 
             foreach ($otherCategories as $category) {

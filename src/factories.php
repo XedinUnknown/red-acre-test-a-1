@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Dhii\Services\Factories\Alias;
 use Dhii\Services\Factories\Constructor;
 use Dhii\Services\Factory;
 use RedAcre\TestA1\AbsolutePathUrlResolver;
@@ -30,5 +31,13 @@ return function (): array {
             'redacre/test-a1/basedir',
             'redacre/test-a1/baseurl',
         ]),
+
+
+        ###################################################
+        # Module Wiring
+        ###################################################
+
+        'redacre/test-a1/theme/assets/version' => new Alias('redacre/test-a1/version'),
+        'redacre/test-a1/theme/absolute_path_url_resolver' => new Alias('redacre/test-a1/absolute_path_url_resolver'),
     ];
 };
