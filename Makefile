@@ -14,7 +14,7 @@ build: install
 install:
 	$(MAKE) install-php
 
-install-php:
+install-php: composer.lock
 	composer install
 
 test:
