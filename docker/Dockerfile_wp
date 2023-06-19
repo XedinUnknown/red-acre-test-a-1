@@ -7,6 +7,7 @@ FROM php:${PHP_BUILD_VERSION}-cli as build
 
 ARG BUILD_ROOT_PATH
 ARG NODE_VERSION
+ARG PHP_MEMORY_LIMIT
 
 # PHP
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
@@ -33,6 +34,9 @@ RUN apt-get install -y openssh-client
 RUN mkdir ~/.ssh
 RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
+# Churn
+RUN echo "memory_limit=${PHP_MEMORY_LIMIT}" >> /usr/local/etc/php/conf.d/docker-php-ram-limit.ini
+
 WORKDIR ${BUILD_ROOT_PATH}
 COPY . ./
 
@@ -41,6 +45,7 @@ FROM php:${PHP_TEST_VERSION}-cli as test
 
 ARG BUILD_ROOT_PATH
 ARG NODE_VERSION
+ARG PHP_MEMORY_LIMIT
 
 # PHP
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
@@ -58,6 +63,9 @@ RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
 ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 RUN node --version
 RUN npm --version
+
+# Churn
+RUN echo "memory_limit=${PHP_MEMORY_LIMIT}" >> /usr/local/etc/php/conf.d/docker-php-ram-limit.ini
 
 WORKDIR ${BUILD_ROOT_PATH}
 COPY --from=build ${BUILD_ROOT_PATH} ${BUILD_ROOT_PATH}
