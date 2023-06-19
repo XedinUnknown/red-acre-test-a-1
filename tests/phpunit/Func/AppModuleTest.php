@@ -19,6 +19,13 @@ class AppModuleTest extends AbstractApplicationTestCase
 
             $container = $this->bootstrapApplication(
                 [
+                    'redacre/test-a1/basedir' => function () {
+                        return BASE_DIR;
+                    },
+                    'redacre/test-a1/definition_file_path' => function () {
+                        return BASE_DIR . '/style.css';
+                    },
+
                     $serviceName => function () use ($factoryValue): string {
                         return $factoryValue;
                     },
