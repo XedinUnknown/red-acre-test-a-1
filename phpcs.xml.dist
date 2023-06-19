@@ -9,6 +9,7 @@
     <exclude-pattern>./modules/**/tests</exclude-pattern>
 
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
+    <config name="testVersion" value="7.2-"/>
 
     <rule ref="PSR12"/>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint"/>
