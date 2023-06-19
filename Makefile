@@ -3,6 +3,8 @@ MODULE_DIRS := $(wildcard modules/* )
 		build \
 		install \
 		install-php \
+		i18n \
+		i18n-makepot \
 		test \
 		test-php \
 		$(MODULE_DIRS)
@@ -13,6 +15,7 @@ all: build
 
 build: install
 	$(MAKE) build-modules
+	$(MAKE) i18n
 	wait
 
 build-modules: $(MODULE_DIRS)
@@ -25,6 +28,14 @@ install:
 
 install-php: composer.lock
 	composer install
+
+i18n: i18n-makepot i18n-makemo
+
+i18n-makepot:
+	wp i18n make-pot . $(LANGS_PATH)/strings.pot --allow-root
+
+i18n-makemo:
+	wp i18n make-mo $(LANGS_PATH) --allow-root
 
 test:
 	$(MAKE) test-php
