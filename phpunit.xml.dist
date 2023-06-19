@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
     colors="true"
-    bootstrap="tests/bootstrap.php"
+    bootstrap="tests/phpunit/bootstrap.php"
 >
     <php>
         <ini name="display_errors" value="1" />
