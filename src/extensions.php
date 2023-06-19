@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Psr\Container\ContainerInterface;
+
 return function (): array {
     return [
         /**
