@@ -1,6 +1,6 @@
 {
-  "name": "xedinunknown/red-acre-test-a-1-core",
-  "description": "The core module of the theme",
+  "name": "xedinunknown/red-acre-test-a-1-blocks",
+  "description": "The blocks module",
   "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
@@ -18,12 +18,12 @@
   },
   "autoload": {
     "psr-4": {
-      "RedAcre\\TestA1\\Core\\": "src"
+      "RedAcre\\TestA1\\Blocks\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "RedAcre\\TestA1\\Core\\Test\\": "src"
+      "RedAcre\\TestA1\\Blocks\\Test\\": "src"
     }
   }
 }

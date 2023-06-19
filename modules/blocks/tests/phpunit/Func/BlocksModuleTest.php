@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 
-namespace RedAcre\TestA1\Core\Test\Func;
+namespace RedAcre\TestA1\Blocks\Test\Func;
 
 use RedAcre\TestA1\Test\AbstractModularTestCase;
-use RedAcre\TestA1\Core\CoreModule as Subject;
+use RedAcre\TestA1\Blocks\BlocksModule as Subject;
 
-class CoreModuleTest extends AbstractModularTestCase
+class BlocksModuleTest extends AbstractModularTestCase
 {
     public function testBootstrap()
     {
