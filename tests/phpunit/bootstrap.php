@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 (function (string $baseFile) {
     $baseDir = dirname($baseFile);
-    $rootDir = dirname($baseDir);
+    $rootDir = dirname($baseDir, 2);
     define('BASE_DIR', $rootDir);
     define('BASE_PATH', "$rootDir/functions.php");
 
