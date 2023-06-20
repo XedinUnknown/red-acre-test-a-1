@@ -33,8 +33,17 @@ services:
       WP_DOMAIN: ${WP_DOMAIN}
       WP_TITLE: ${WP_TITLE}
     volumes:
-      - wordpress:${DOCROOT_PATH}
       - ${BASE_PATH}:${PROJECT_MOUNT_PATH}
+      - type: bind
+        source: ./wordpress
+        target: /var/www/html
+      # This is just a guard that aborts if the mount folder for the plugin doesn't exist.
+      # This keeps Docker from creating a root-owned folder in the host file system.
+      # This only works with the long form mount definition. Only missing `source` causes an error.
+      # https://docs.docker.com/storage/bind-mounts/#differences-between--v-and---mount-behavior
+      - type: bind
+        source: ./wordpress/wp-content/themes/${THEME_NAME}
+        target: /tmp/foo
     ports:
       - 80:80
 
