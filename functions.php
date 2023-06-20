@@ -33,7 +33,7 @@ use RedAcre\TestA1\MainModule;
         $container = $bootstrap($providers, [
             new Dictionary([
                 'redacre/test-a1/main_file_path' => $basePath,
-                'redacre/test-a1/definition_file_path' => str_ireplace($wpRootPath, '', "$baseDir/style.css"),
+                'redacre/test-a1/definition_file_path' => "$baseDir/style.css",
                 'redacre/test-a1/basedir' => $baseDir,
                 'wp/core/abspath' => $wpRootPath,
             ]),
