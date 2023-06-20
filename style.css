@@ -11,3 +11,8 @@
     Tested up to: 6.0
     Requires PHP: 7.2
  */
+
+footer .wp-block-navigation {
+    color: inherit;
+    font: inherit;
+}
