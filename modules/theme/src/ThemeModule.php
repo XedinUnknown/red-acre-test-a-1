@@ -39,11 +39,14 @@ class ThemeModule implements ModuleInterface
         /** @var UrlResolverInterface $urlResolver */
         $urlResolver = $c->get('redacre/test-a1/theme/absolute_path_url_resolver');
         $modDir = $c->get('redacre/test-a1/theme/basedir');
+        /** @var string $stylesheetPath */
+        $stylesheetPath = $c->get('redacre/test-a1/theme/assets/stylesheet_path');
         $assetPath = "$modDir/frontend/dist/redacre-test-block.js";
         $runtimePath = "$modDir/frontend/dist/runtime.js";
         $assetUrl = $urlResolver->resolveUrl($assetPath);
         $runtimeUrl = $urlResolver->resolveUrl($runtimePath);
-        $registerScripts = function () use ($assetUrl, $runtimeUrl, $assetVersion): void {
+        $stylesheetUrl = $urlResolver->resolveUrl($stylesheetPath);
+        $registerScripts = function () use ($assetUrl, $runtimeUrl, $stylesheetUrl, $assetVersion): void {
             wp_register_script(
                 'redacre-test-a1-encore-runtime',
                 $runtimeUrl,
@@ -58,8 +61,24 @@ class ThemeModule implements ModuleInterface
                 ],
                 $assetVersion
             );
+
+            wp_enqueue_style(
+                'redacre-test-a1-styles',
+                $stylesheetUrl,
+                [],
+                $assetVersion
+            );
+
+            wp_enqueue_style(
+                'redacre-test-a1-google-font-dongle',
+                'https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap'
+            );
+
+            wp_enqueue_style(
+                'redacre-test-a1-google-font-inter',
+                'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap'
+            );
         };
-        add_action('wp_enqueue_scripts', $registerScripts);
-        add_action('admin_enqueue_scripts', $registerScripts);
+        add_action('enqueue_block_assets', $registerScripts);
     }
 }
