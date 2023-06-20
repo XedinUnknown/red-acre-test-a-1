@@ -29,6 +29,10 @@ return function (string $modDir): array {
             'redacre/test-a1/theme/frontend/dir',
         ]),
 
+        'redacre/test-a1/theme/assets/stylesheet_path' => new StringService('{0}/style.css', [
+            'redacre/test-a1/theme/frontend/dir',
+        ]),
+
         /**
          * A list of paths to block.json files.
          * Each path must end with `block.json`.

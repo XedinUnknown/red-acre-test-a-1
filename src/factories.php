@@ -39,5 +39,6 @@ return function (): array {
 
         'redacre/test-a1/theme/assets/version' => new Alias('redacre/test-a1/version'),
         'redacre/test-a1/theme/absolute_path_url_resolver' => new Alias('redacre/test-a1/absolute_path_url_resolver'),
+        'redacre/test-a1/theme/assets/stylesheet_path' => new Alias('redacre/test-a1/definition_file_path'),
     ];
 };
