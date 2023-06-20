@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/modules.local/core/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/modules.local/core/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests/phpunit" isTestSource="true" packagePrefix="RedAcre\TestA1\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/blocks/src" isTestSource="false" packagePrefix="RedAcre\TestA1\Blocks\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/theme/src" isTestSource="false" packagePrefix="RedAcre\TestA1\Theme\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/amp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/amphp/byte-stream" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
