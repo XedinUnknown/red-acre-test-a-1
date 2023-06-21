@@ -63,13 +63,6 @@ class ThemeModule implements ModuleInterface
             );
 
             wp_enqueue_style(
-                'redacre-test-a1-styles',
-                $stylesheetUrl,
-                [],
-                $assetVersion
-            );
-
-            wp_enqueue_style(
                 'redacre-test-a1-google-font-dongle',
                 'https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;600&display=swap'
             );
@@ -77,6 +70,16 @@ class ThemeModule implements ModuleInterface
             wp_enqueue_style(
                 'redacre-test-a1-google-font-inter',
                 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap'
+            );
+
+            wp_enqueue_style(
+                'redacre-test-a1-styles',
+                $stylesheetUrl,
+                [
+                    'redacre-test-a1-google-font-dongle',
+                    'redacre-test-a1-google-font-inter',
+                ],
+                $assetVersion
             );
         };
         add_action('enqueue_block_assets', $registerScripts);
