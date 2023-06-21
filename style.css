@@ -16,3 +16,9 @@ footer .wp-block-navigation {
     color: inherit;
     font: inherit;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
