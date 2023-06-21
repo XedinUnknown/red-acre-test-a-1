@@ -22,3 +22,7 @@ footer .wp-block-navigation {
     clear: both;
     display: table;
 }
+
+.flex-space-evenly {
+    justify-content: space-evenly !important;
+}
