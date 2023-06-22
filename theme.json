@@ -152,6 +152,11 @@
 			"spacingSizes": [
         {
           "size": "0.375rem",
+          "slug": "3",
+          "name": "0.4"
+        },
+        {
+          "size": "0.375rem",
           "slug": "6",
           "name": "0.8"
         },
