@@ -27,7 +27,9 @@ footer .wp-block-navigation {
     justify-content: space-evenly !important;
 }
 
-.wp-block-navigation__responsive-container {
-    background: linear-gradient(104.53deg, #EDEBF9 2.98%, rgba(255, 255, 255, 0.4) 101.73%) !important;
-    backdrop-filter: blur(8px);
+@media (max-width: 600px) {
+    .wp-block-navigation__responsive-container {
+        background: linear-gradient(104.53deg, #EDEBF9 2.98%, rgba(255, 255, 255, 0.4) 101.73%) !important;
+        backdrop-filter: blur(8px);
+    }
 }
