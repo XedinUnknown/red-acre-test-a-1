@@ -43,4 +43,8 @@ footer .wp-block-navigation {
         background: linear-gradient(104.53deg, #EDEBF9 2.98%, rgba(255, 255, 255, 0.4) 101.73%) !important;
         backdrop-filter: blur(8px);
     }
+
+    footer .wp-block-group .wp-block-group .wp-block-group {
+        width: 100%;
+    }
 }
