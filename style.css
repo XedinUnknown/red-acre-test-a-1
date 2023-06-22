@@ -11,3 +11,40 @@
     Tested up to: 6.0
     Requires PHP: 7.2
  */
+
+footer .wp-block-navigation {
+    color: inherit;
+    font: inherit;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.flex-space-evenly {
+    justify-content: space-evenly !important;
+}
+
+@media (min-width: 600px) {
+    .breakout-wide-only {
+        position: absolute;
+    }
+
+    .nudged-wide-only {
+        padding-top: var(--wp--preset--spacing--155);
+        padding-right: var(--wp--preset--spacing--54);
+    }
+}
+
+@media (max-width: 600px) {
+    .wp-block-navigation__responsive-container {
+        background: linear-gradient(104.53deg, #EDEBF9 2.98%, rgba(255, 255, 255, 0.4) 101.73%) !important;
+        backdrop-filter: blur(8px);
+    }
+
+    footer .wp-block-group .wp-block-group .wp-block-group {
+        width: 100%;
+    }
+}
