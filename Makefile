@@ -5,6 +5,8 @@ MODULE_DIRS := $(wildcard modules/* )
 		install-php \
 		i18n \
 		i18n-makepot \
+		qa \
+		scan \
 		test \
 		test-php \
 		$(MODULE_DIRS)
@@ -37,8 +39,17 @@ i18n-makepot:
 i18n-makemo:
 	wp i18n make-mo $(LANGS_PATH) --allow-root
 
+qa:
+	$(MAKE) test
+	$(MAKE) scan
+	wait
+
 test:
 	$(MAKE) test-php
 
 test-php:
 	vendor/bin/phpunit
+
+scan:
+	vendor/bin/psalm
+	vendor/bin/phpcs -s
