@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+
+  "name": "redacre/test",
+  "title": "Test",
+  "category": "redacre",
+  "description": "A test Red Acre block",
+  "attributes": {
+  },
+  "editorScript": "block-redacre-test-editor-script"
+}
