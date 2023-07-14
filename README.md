@@ -29,12 +29,12 @@ A test theme for Red Acre.
 - Integrations with PHPStorm and tools via the IDE are included here. Inspect the database, run Composer or tests,
   perform powerful inspections without leaving the IDE, all configured for you.
 
-- A very notable aspect is that this theme is [_modular_][modularity]. This is a very powerful approach whic 
+- A very notable aspect is that this theme is [_modular_][modularity]. This is a very powerful approach which 
   can bring tremendous agility to the SDLC, as it allows for easy prototyping, override/extension of any part
   of the application, easy management and extraction, and much more.
 
-  Some parts are intended mainly for illustration. For example, the `blocks` module is 
-  illustrates how a module may be self-encapsulated with very well-defined and separated concerns, while
+  Some parts are intended mainly for illustration. For example, the `blocks` module
+  illustrates how a module may be self-encapsulated with very well-defined and separated concerns, yet
   still robustly collaborating with other modules thanks to inversion of control from modules to the application.
 
   While the `themes` module is supposed to contain all things that are directly related to the theme,
@@ -43,7 +43,7 @@ A test theme for Red Acre.
   symlinks during development and copying files from the module to the root during build. I'd prefer to keep it clean.
 
   Each module is intended to be as self-encapsulating as possible, and so each module has its own build process.
-  Run `Run `docker compose run --rm build make build-modules` to build only the modules.
+  Run `docker compose run --rm build make build-modules` to build only the modules.
 
 ## Notes
 - Created from [wp-oop/plugin-boilerplate][]. That is my code, as well as in many of the libraries used here.
@@ -58,7 +58,7 @@ A test theme for Red Acre.
     * It's also simply impossible to implement some things in an editable way at all, because
       the software as well as the community and documentation are still evolving. An example of this is the
       "mobile breakpoint" - a viewport width, at which the site switches to a compact mode.
-- I have separated some aspects of the work into separate PRs. Please feel free to review those, if that's convenient.
+- I have divided some aspects of the work into separate PRs. Please feel free to review those, if that's convenient.
 - There may be many new things here. If something is unclear, please feel free to read the linked documentation and that
   relating to the project's dependencies. I would love to give a guided tour, so please feel free to contact me too.
 - I hope you like the project, and enjoy reviewing it!
