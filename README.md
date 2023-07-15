@@ -9,7 +9,7 @@ A test theme for Red Acre.
 3. Run `docker compose build` to build the containers.
 4. Run `docker compose run --rm build make build` to build the project, including modules.
 5. Consider adding the hostname from config into the `hosts` file, to serve the site via its domain.
-6. Run `docker-compose up wp_dev` to bring up the local WordPress environment.
+6. Run `docker compose up wp_dev` to bring up the local WordPress environment.
 
 ## Details
 - This is a block theme, meaning that it is made entirely of Gutenberg blocks. 💝
